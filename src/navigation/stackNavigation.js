@@ -8,6 +8,8 @@ import Login from '../screens/Login';
 import TabNavigator from './TabNavigator';
 import ParticipanteForm from '../screens/ParticipanteForm';
 import SignUpScreen from '../screens/SignUp/SignUpScreen';
+import ParticipantesList from '../screens/ParticipantesList';
+import EventDetalhe from '../screens/Eventdetalhe/Eventdetalhe';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,12 +31,13 @@ const Routes = () => {
                     <>
                         <Stack.Screen name="Home" component={TabNavigator} />
                         <Stack.Screen name="AddParticipante" component={ParticipanteForm} />
+                        <Stack.Screen name="EventDetalhe" component={EventDetalhe} />
                     </>
                 ) : (
                     <>
                         <Stack.Screen name="Login" component={Login} />
                         <Stack.Screen name="SignUp" component={SignUpScreen} />
-                        
+                       
                     </>
 
                 )}
